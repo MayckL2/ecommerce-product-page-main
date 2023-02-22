@@ -29,11 +29,11 @@
 <body>
 
   <header class="container-md">
-    <img src="images/icon-menu.svg" class="hambur" alt="">
+    <img onclick="openMenu()" src="images/icon-menu.svg" class="hambur" alt="">
     
     <img src="images/logo.svg" class="logo" alt="">
-    <ul>
-      <img src="images/icon-close.svg" class="fechahambur" alt="">
+    <ul id="menu">
+      <img onclick="closeMenu()" src="images/icon-close.svg" class="fechahambur" alt="">
       <li>Collections</li>
       <li>Men</li>
       <li>Women</li>
@@ -43,7 +43,7 @@
 
     <div>
       <p class="iconCart"></p>
-      <img src="images/icon-cart.svg" class="cart" alt="">
+      <img onclick="openCart()" src="images/icon-cart.svg" class="cart" alt="">
   
       <img src="images/image-avatar.png" class="perfil" alt="">
     </div>
@@ -68,13 +68,13 @@
     <section class="left container col-md-5">
       <img src="images/image-product-1.jpg" class="thumb" alt="">
 
-      <img src="images/image-product-1-thumbnail.jpg" alt="">
+      <img id="carr" src="images/image-product-1-thumbnail.jpg" alt="">
       <img src="images/image-product-2-thumbnail.jpg" alt="">
       <img src="images/image-product-3-thumbnail.jpg" alt="">
       <img src="images/image-product-4-thumbnail.jpg" alt="">
 
-      <img src="images/icon-next.svg" class="next" alt="">
-      <img src="images/icon-previous.svg" class="prev" alt="">
+      <img onclick="next()" src="images/icon-next.svg" class="next" alt="">
+      <img onclick="prev()" src="images/icon-previous.svg" class="prev" alt="">
     </section>
 
     <section class="right container col-md-6">
@@ -94,9 +94,9 @@
 
       <div class="row">
         <div class="quant col-md-4">
-          <img src="images/icon-minus.svg" alt="">
-          <p>0</p>
-          <img src="images/icon-plus.svg" alt="">
+          <img onclick="minus()" src="images/icon-minus.svg" alt="">
+          <p id="quant">0</p>
+          <img onclick="plus()" src="images/icon-plus.svg" alt="">
         </div>
   
         <button class="col-md-7">
@@ -109,6 +109,7 @@
 
   </main>
 
+  <script src="script.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/MayckL2">Mayck Luciano</a>.
