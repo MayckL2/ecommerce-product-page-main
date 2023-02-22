@@ -1,0 +1,336 @@
+body{
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+
+    .logo{
+        margin: 0 40px 0 0;
+    }
+
+    .hambur{
+        display: none;
+    }
+    .fechahambur{
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        .hambur{
+            display: block;
+            width: 70px;
+            padding: 10px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .fechahambur{
+            display: block;
+            width: 40px;
+            position: absolute;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        ul{
+            flex-direction: column;
+            position: absolute;
+            top: 10px;
+            left: -70vw;
+            z-index: 1;
+            background-color: white;
+            width: 70vw;
+            height: 100vh;
+            padding: 120px 50px;
+
+            li{
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin-top: 20px;
+        
+        li{
+            opacity: 0.5;
+            font-weight: bold;
+            cursor: pointer;
+            border-bottom: transparent solid;
+            transition: all 0.5s;
+        }
+        
+        li:hover{
+            opacity: 1;
+            border-bottom: orange solid;
+        }
+    }
+
+    div{
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .cart{
+            width: 30px;
+            cursor: pointer;
+
+        }
+        .iconCart{
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+            border-radius: 50%;
+            position: absolute;
+            margin-left: 15px;
+            display: none;
+        }
+
+        .perfil{
+            width: 60px;
+            transition: all 0.5s;
+            border: solid transparent;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .perfil:hover{
+            border: solid orange;
+        }
+    }
+
+    .modalCart{
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: solid rgba(128, 128, 128, 0.219);
+        width: 300px;
+        height: auto;
+        position: absolute;
+        top: 80px;
+        right: 10px;
+        z-index: 1;
+
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .prod{
+            position: relative;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+                "img nome nome ."
+                "img preco total del";
+            gap: 0px;
+            
+            img:nth-of-type(1){
+                grid-area: img;
+                width: 70px;
+                border-radius: 10px;
+            }
+            img:nth-of-type(2){
+                grid-area: del;
+                width: 20px;
+            }
+            img:nth-of-type(2):hover{
+                filter: brightness(0);
+                cursor: pointer;
+            }
+            p:nth-of-type(1){
+                grid-area: nome;
+                margin: 0;
+            }
+            p:nth-of-type(2){
+                grid-area: preco;
+                margin: 0;
+            }
+            span{
+                grid-area: total;
+            }
+
+            p{
+                font-weight: bold;
+                opacity: 0.5;
+                text-align: center;
+            }
+            span{
+                font-weight: bold;
+            }
+
+        }
+
+        button{
+            border: none;
+            background-color: orange;
+            border-radius: 20px;
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
+
+main{
+    margin-bottom: 100px;
+}
+
+.left{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .thumb{
+        width: 35vw;
+        height: 30vw;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    img{
+        width: 90px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .prev, .next{
+        display: none;
+    }
+ 
+    @media (max-width: 800px) {
+        flex-wrap: nowrap;
+        position: relative;
+
+        .thumb{
+            display: none;
+        }
+        img{
+           width: 90vw;
+           height: 50vh;
+        }
+        img:nth-of-type(3){
+            display: none;
+        }
+        img:nth-of-type(4){
+            display: none;
+        }
+        img:nth-of-type(5){
+            display: none;
+        }
+
+        .prev, .next{
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .prev{
+            left: 30px;
+        }
+        .next{
+            right: 30px;
+        }
+    }
+}
+
+.right{
+    font-weight: bold;
+    padding: 30px;
+
+    span{
+        color: orange;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 45px;
+        margin: 10px 0;
+    }
+    p{
+        margin: 20px 0;
+        opacity: 0.5;
+    }
+
+    .ticket{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 30%;
+        align-items: center;
+        position: relative;
+        
+        .preco{
+            opacity: 1;
+            font-size: 30px;
+        }
+        .discount{
+            color: rgb(255,126,27);
+        }
+        .antigo{
+            text-decoration: line-through;
+            margin-top: -15px;
+        }
+        
+        @media (max-width: 800px){
+            width: 100%;
+            justify-content: flex-start;
+
+            .antigo{
+                position: absolute;
+                right: 30px;
+                top: 40px;
+            }
+        }
+    }
+
+    .quant{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        justify-content: space-around;
+
+        p{
+            margin-top: 15px;
+        }
+        img{
+            width: 15px;
+            cursor: pointer;
+        }
+    }
+
+    button{
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(245, 160, 3);
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        cursor: pointer;
+
+        img{
+            filter: brightness(100);
+        }
+    }
+
+    
+}
