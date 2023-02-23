@@ -26,11 +26,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onresize="check()">
 
   <header class="container-md">
     <img onclick="openMenu()" src="images/icon-menu.svg" class="hambur" alt="">
-    
+
     <img src="images/logo.svg" class="logo" alt="">
     <ul id="menu">
       <img onclick="closeMenu()" src="images/icon-close.svg" class="fechahambur" alt="">
@@ -42,9 +42,9 @@
     </ul>
 
     <div>
-      <p class="iconCart"></p>
+      <p class="iconCart">1</p>
       <img onclick="openCart()" src="images/icon-cart.svg" class="cart" alt="">
-  
+
       <img src="images/image-avatar.png" class="perfil" alt="">
     </div>
 
@@ -58,7 +58,7 @@
         <span>$375,00</span>
         <img src="images/icon-delete.svg" alt="">
       </div>
-      
+
       <button>Checkout</button>
     </div>
   </header>
@@ -66,16 +66,34 @@
   <main class="container-fluid row">
 
     <section class="left container col-md-5">
-      <img src="images/image-product-1.jpg" class="thumb" alt="">
+      <img class="thumb imgProd" src="images/image-product-1.jpg" alt="">
 
-      <img id="carr" src="images/image-product-1-thumbnail.jpg" alt="">
-      <img src="images/image-product-2-thumbnail.jpg" alt="">
-      <img src="images/image-product-3-thumbnail.jpg" alt="">
-      <img src="images/image-product-4-thumbnail.jpg" alt="">
+      <img class="imgProd" id="carr" src="images/image-product-1-thumbnail.jpg" alt="">
+      <img class="imgProd" src="images/image-product-2-thumbnail.jpg" alt="">
+      <img class="imgProd" src="images/image-product-3-thumbnail.jpg" alt="">
+      <img class="imgProd" src="images/image-product-4-thumbnail.jpg" alt="">
 
       <img onclick="next()" src="images/icon-next.svg" class="next" alt="">
       <img onclick="prev()" src="images/icon-previous.svg" class="prev" alt="">
+
+      <div class="modalCarr">
+          <img class="imgBig" src="images/image-product-1.jpg" alt="">
+
+          <h1 onclick="fechaCarr()" class="fechaCarr">X</h1>
+
+        <div class="imgSmall">
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+          <img src="images/image-product-2-thumbnail.jpg" alt="">
+          <img src="images/image-product-3-thumbnail.jpg" alt="">
+          <img src="images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+        
+        <img onclick="prevModal()" class="prev" src="images/icon-previous.svg" alt="">
+        <img onclick="nextModal()" class="next" src="images/icon-next.svg" alt="">
+      </div>
+
     </section>
+
 
     <section class="right container col-md-6">
       <span>Sneaker Company</span>
@@ -98,7 +116,7 @@
           <p id="quant">0</p>
           <img onclick="plus()" src="images/icon-plus.svg" alt="">
         </div>
-  
+
         <button class="col-md-7">
           <img src="images/icon-cart.svg" alt="">
           Add to cart

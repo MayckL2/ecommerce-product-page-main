@@ -92,7 +92,9 @@ header{
             border-radius: 50%;
             position: absolute;
             margin-left: 15px;
-            display: none;
+            // display: none;
+            text-align: center;
+            color: white;
         }
 
         .perfil{
@@ -107,6 +109,7 @@ header{
         }
     }
 
+    
     .modalCart{
         background-color: white;
         border-radius: 20px;
@@ -122,6 +125,14 @@ header{
         right: 10px;
         z-index: 1;
         display: none;
+
+        @media (max-width: 600px) {
+            width: 90vw;
+
+            .prod{
+                width: 90%;
+            }
+        }
 
         h1{
             font-size: 25px;
@@ -250,6 +261,61 @@ main{
             right: 30px;
         }
     }
+
+    .modalCarr{
+        position: absolute;
+        left: 35%;
+        top: 50px;
+        z-index: 1;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 100vw rgba(0, 0, 0, 0.507);
+        display: none;
+
+        img{
+            cursor: default;
+        }
+        .imgBig{
+            display: flex;
+            width: 410px;
+            overflow: hidden;
+        }
+
+        .imgSmall{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        .prev, .next{
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .next{
+            top: 30%;
+            right: -20px;
+        }
+        .prev{
+            top: 30%;
+            left: -20px;
+        }
+
+        .fechaCarr{
+            position: absolute;
+            top: -40px;
+            right: 0px;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+        }
+    }
 }
 
 .right{
@@ -310,7 +376,8 @@ main{
             margin-top: 15px;
         }
         img{
-            width: 15px;
+            width: 20px;
+            padding: 5px;
             cursor: pointer;
         }
     }
