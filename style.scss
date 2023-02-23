@@ -129,8 +129,11 @@ header{
         @media (max-width: 600px) {
             width: 90vw;
 
-            .prod{
-                width: 90%;
+            #cartProd{
+                width: 90vw;
+                .prod{
+                    width: 90%;
+                }
             }
         }
 
@@ -139,6 +142,11 @@ header{
             font-weight: bold;
         }
         
+        #cartProd{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            
         .prod{
             position: relative;
             display: grid;
@@ -184,7 +192,7 @@ header{
             }
 
         }
-
+    }
         button{
             border: none;
             background-color: orange;
@@ -193,6 +201,12 @@ header{
             width: 100%;
             font-weight: bold;
             color: white;
+            position: relative;
+            transition: all 0.5s;
+        }
+        button:hover{
+            opacity: 0.7;
+            border-radius: 5px;
         }
     }
 }
@@ -394,10 +408,15 @@ main{
         gap: 10px;
         padding: 10px;
         cursor: pointer;
+        transition: all 0.5s;
 
         img{
             filter: brightness(100);
         }
+    }
+    button:hover{
+        opacity: 0.7;
+        border-radius: 0px;
     }
 
     

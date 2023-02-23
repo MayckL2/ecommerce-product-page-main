@@ -116,7 +116,10 @@ header .modalCart {
   header .modalCart {
     width: 90vw;
   }
-  header .modalCart .prod {
+  header .modalCart #cartProd {
+    width: 90vw;
+  }
+  header .modalCart #cartProd .prod {
     width: 90%;
   }
 }
@@ -124,7 +127,12 @@ header .modalCart h1 {
   font-size: 25px;
   font-weight: bold;
 }
-header .modalCart .prod {
+header .modalCart #cartProd {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+header .modalCart #cartProd .prod {
   position: relative;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -132,36 +140,36 @@ header .modalCart .prod {
   grid-template-areas: "img nome nome ." "img preco total del";
   gap: 0px;
 }
-header .modalCart .prod img:nth-of-type(1) {
+header .modalCart #cartProd .prod img:nth-of-type(1) {
   grid-area: img;
   width: 70px;
   border-radius: 10px;
 }
-header .modalCart .prod img:nth-of-type(2) {
+header .modalCart #cartProd .prod img:nth-of-type(2) {
   grid-area: del;
   width: 20px;
 }
-header .modalCart .prod img:nth-of-type(2):hover {
+header .modalCart #cartProd .prod img:nth-of-type(2):hover {
   filter: brightness(0);
   cursor: pointer;
 }
-header .modalCart .prod p:nth-of-type(1) {
+header .modalCart #cartProd .prod p:nth-of-type(1) {
   grid-area: nome;
   margin: 0;
 }
-header .modalCart .prod p:nth-of-type(2) {
+header .modalCart #cartProd .prod p:nth-of-type(2) {
   grid-area: preco;
   margin: 0;
 }
-header .modalCart .prod span {
+header .modalCart #cartProd .prod span {
   grid-area: total;
 }
-header .modalCart .prod p {
+header .modalCart #cartProd .prod p {
   font-weight: bold;
   opacity: 0.5;
   text-align: center;
 }
-header .modalCart .prod span {
+header .modalCart #cartProd .prod span {
   font-weight: bold;
 }
 header .modalCart button {
@@ -172,6 +180,12 @@ header .modalCart button {
   width: 100%;
   font-weight: bold;
   color: white;
+  position: relative;
+  transition: all 0.5s;
+}
+header .modalCart button:hover {
+  opacity: 0.7;
+  border-radius: 5px;
 }
 
 main {
@@ -358,7 +372,12 @@ main {
   gap: 10px;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .right button img {
   filter: brightness(100);
+}
+.right button:hover {
+  opacity: 0.7;
+  border-radius: 0px;
 }/*# sourceMappingURL=style.css.map */

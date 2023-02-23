@@ -51,12 +51,15 @@
     <div class="modalCart">
       <h1>Cart</h1>
 
-      <div class="prod">
-        <img src="images/image-product-1-thumbnail.jpg" alt="">
-        <p>Fall limited Edition Sneaker</p>
-        <p>$124,00 x 3</p>
-        <span>$375,00</span>
-        <img src="images/icon-delete.svg" alt="">
+      <div id="cartProd">
+
+        <div class="prod">
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+          <p>Fall limited Edition Sneaker</p>
+          <p>$124,00 x 3</p>
+          <span>$375,00</span>
+          <img onclick="removeCart(0)" src="images/icon-delete.svg" alt="">
+        </div>
       </div>
 
       <button>Checkout</button>
@@ -77,9 +80,9 @@
       <img onclick="prev()" src="images/icon-previous.svg" class="prev" alt="">
 
       <div class="modalCarr">
-          <img class="imgBig" src="images/image-product-1.jpg" alt="">
+        <img class="imgBig" src="images/image-product-1.jpg" alt="">
 
-          <h1 onclick="fechaCarr()" class="fechaCarr">X</h1>
+        <h1 onclick="fechaCarr()" class="fechaCarr">X</h1>
 
         <div class="imgSmall">
           <img src="images/image-product-1-thumbnail.jpg" alt="">
@@ -87,7 +90,7 @@
           <img src="images/image-product-3-thumbnail.jpg" alt="">
           <img src="images/image-product-4-thumbnail.jpg" alt="">
         </div>
-        
+
         <img onclick="prevModal()" class="prev" src="images/icon-previous.svg" alt="">
         <img onclick="nextModal()" class="next" src="images/icon-next.svg" alt="">
       </div>
@@ -113,11 +116,11 @@
       <div class="row">
         <div class="quant col-md-4">
           <img onclick="minus()" src="images/icon-minus.svg" alt="">
-          <p id="quant">0</p>
+          <p id="quant">1</p>
           <img onclick="plus()" src="images/icon-plus.svg" alt="">
         </div>
 
-        <button class="col-md-7">
+        <button onclick="addCart()" class="col-md-7">
           <img src="images/icon-cart.svg" alt="">
           Add to cart
         </button>
@@ -130,7 +133,7 @@
   <script src="script.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/MayckL2">Mayck Luciano</a>.
+    Coded by <a href="https://github.com/MayckL2" target="_blank">Mayck Luciano</a>.
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
