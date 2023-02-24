@@ -2,6 +2,53 @@ body{
     font-family: sans-serif;
 }
 
+.modalConfirmed{
+  background-color: rgb(255, 166, 0);
+  border-radius: 20px;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  gap: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 30%;
+
+  @media (max-width: 800px) {
+      width: 90vw;
+      left: 20px;
+  }
+
+  h1{
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 1px 5px black;
+  }
+
+  img{
+    width: 150px;
+    animation: popup 0.5s ease-in-out;
+  }
+  @keyframes popup {
+    0%{scale: 0.5;}
+    50%{scale: 1.2;}
+    100%{scale: 1;}
+  }
+
+  button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: greenyellow;
+    transition: all 0.5s;
+  }
+  button:hover{
+    border-radius: 0px;
+  }
+}
 header{
     display: flex;
     align-items: center;

@@ -142,3 +142,12 @@ function addCart(){
     // muda numero icone do carrinho
     iconCart.innerHTML = parseFloat(iconCart.innerHTML) + 1
 }
+
+let modalConfi= document.querySelector(".modalConfirmed")
+function openConfirmed(){
+  modalConfi.style.display= "flex"
+}
+
+function closeConfirmed(){
+  modalConfi.style.display= "none"
+}

@@ -28,6 +28,12 @@
 
 <body onresize="check()">
 
+  <div class="modalConfirmed">
+    <h1>Produto adicionado ao carrinho</h1>
+    <img src="images/check.png" alt="">
+    <button onclick="closeConfirmed()">Continuar Comprando</button>
+  </div>
+  
   <header class="container-md">
     <img onclick="openMenu()" src="images/icon-menu.svg" class="hambur" alt="">
 
@@ -120,7 +126,7 @@
           <img onclick="plus()" src="images/icon-plus.svg" alt="">
         </div>
 
-        <button onclick="addCart()" class="col-md-7">
+        <button onclick="addCart(), openConfirmed()" class="col-md-7">
           <img src="images/icon-cart.svg" alt="">
           Add to cart
         </button>
